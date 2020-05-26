@@ -4,6 +4,7 @@ use controleEstoque
 
 create table Departamentos (
 	Codigo varchar (15) primary key,
+	Cnpj varchar (20),
 	Nome varchar (30),
 	Data  varchar(10),
 	NomeFantasia varchar (15)
@@ -24,3 +25,7 @@ create table Login (
 	Usuario varchar (10),
 	Senha varchar (10)
 );
+
+select * from Login
+ 
+ drop table Departamentos
