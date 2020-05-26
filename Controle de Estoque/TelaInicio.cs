@@ -50,8 +50,8 @@ namespace Controle_de_Estoque
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            TelaInicio inicio = new TelaInicio();
-            inicio.Show();
+            TelaLogin login = new TelaLogin();
+            login.Show();
             this.Hide();
         }
 
@@ -65,6 +65,11 @@ namespace Controle_de_Estoque
             CadastroUsuario NewUsuario = new CadastroUsuario();
             NewUsuario.Show();
             this.Hide();
+        }
+
+        public void GuardaUsuario (string Usuario)
+        {
+            txtUsuarioLogado.Text = Usuario;
         }
     }
 }

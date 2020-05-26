@@ -34,7 +34,7 @@ namespace Controle_de_Estoque
         {
             ConexaoBanco conexao = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO  Login values ('" + txtUsuario.Text + "','" + txtSenha.Text + ")";
+            cmd.CommandText = "INSERT INTO  Login values ('" + txtUsuario.Text + "','" + txtSenha.Text + "')";
             try
             {
                 cmd.Connection = conexao.Conectar();

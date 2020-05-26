@@ -107,7 +107,7 @@ namespace Controle_de_Estoque
                 string codigo = txtCodigo.Text;
                 //inicia a conexão com o banco
                 cmd.Connection = conexao.Conectar();
-                cmd.CommandText = "UPDATE Produtos SET Nome = '" + txtProduto.Text + ",ValorCompra = '" + txtValorCompra.Text + "',ValorVenda = " + txtValorVenda.Text + "',QntEstoque = '" + txtQuantidade.Text + "', Descricao = '" + txtDescricao.Text + " WHERE Codigo = @codigo)";
+                cmd.CommandText = "UPDATE Produtos SET Nome = '" + txtProduto.Text + ",ValorCompra = '" + txtValorCompra.Text + "',ValorVenda = " + txtValorVenda.Text + "',QntEstoque = '" + txtQuantidade.Text + "', Descricao = '" + txtDescricao.Text + "' WHERE Codigo = @codigo)";
                 cmd.Parameters.AddWithValue("@codigo", codigo);
                 cmd.ExecuteNonQuery();
                 SqlDataReader dr = cmd.ExecuteReader();

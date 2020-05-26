@@ -92,7 +92,6 @@
             this.cbxDepartamento.Name = "cbxDepartamento";
             this.cbxDepartamento.Size = new System.Drawing.Size(174, 21);
             this.cbxDepartamento.TabIndex = 4;
-            this.cbxDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamento_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -238,6 +237,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CadastroDeProdutos";
             this.Text = "Cadastro De Produtos";
+            this.Load += new System.EventHandler(this.CadastroDeProdutos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

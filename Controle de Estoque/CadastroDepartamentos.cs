@@ -33,14 +33,13 @@ namespace Controle_de_Estoque
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             ConexaoBanco conexao = new ConexaoBanco();
-            SqlCommand cmd = new SqlCommand();
+            
             try
-            {
+            {   SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexao.Conectar();
-                cmd.CommandText = "INSERT INTO Departamentos values ('"+txtCodigo.Text+"','"+txtCnpj.Text+"','"+txtNomeEmpresa.Text+"','"+txtData.Text+"','"+txtNomeFantasia.Text+")";
+                cmd.CommandText = "INSERT INTO Departamentos values ('"+txtCodigo.Text+"','"+txtCnpj.Text+"','"+txtNomeEmpresa.Text+"','"+txtData.Text+"','"+txtNomeFantasia.Text+"')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Dados incluidos com sucesso");
-                conexao.Desconectar();
                 //Pergunta se o usuário deseja adicionar outro produto
                 if (MessageBox.Show("Gostaria de cadastrar outro departamento?", "Confirma?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -58,9 +57,9 @@ namespace Controle_de_Estoque
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro ao conectar-se com o banco de dados!");
+                MessageBox.Show("Erro ao conectar-se com o banco de dados!",ex.Message);
             }
-
+            conexao.Desconectar();
         }
 
         public void LimpaCampos()

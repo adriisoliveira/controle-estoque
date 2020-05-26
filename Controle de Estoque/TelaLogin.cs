@@ -62,5 +62,12 @@ namespace Controle_de_Estoque
         {
             txtUsuario.Focus();
         }
+
+        public void GuardaUsuario()
+        {
+            string usuario = txtUsuario.Text;
+            TelaInicio inicio = new TelaInicio();
+            inicio.GuardaUsuario(usuario);
+        }
     }
 }

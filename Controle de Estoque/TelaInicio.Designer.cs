@@ -35,13 +35,15 @@
             this.btnCadastrarDepartamento = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrarUsuario = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUsuarioLogado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 13);
+            this.label1.Location = new System.Drawing.Point(43, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 23);
             this.label1.TabIndex = 0;
@@ -49,7 +51,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(47, 55);
+            this.btnConsultar.Location = new System.Drawing.Point(47, 92);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(223, 23);
             this.btnConsultar.TabIndex = 1;
@@ -59,7 +61,7 @@
             // 
             // btnCadastrarProduto
             // 
-            this.btnCadastrarProduto.Location = new System.Drawing.Point(47, 84);
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(47, 121);
             this.btnCadastrarProduto.Name = "btnCadastrarProduto";
             this.btnCadastrarProduto.Size = new System.Drawing.Size(223, 23);
             this.btnCadastrarProduto.TabIndex = 2;
@@ -69,7 +71,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(47, 113);
+            this.btnAlterar.Location = new System.Drawing.Point(47, 150);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(223, 23);
             this.btnAlterar.TabIndex = 3;
@@ -79,7 +81,7 @@
             // 
             // btnCadastrarDepartamento
             // 
-            this.btnCadastrarDepartamento.Location = new System.Drawing.Point(47, 143);
+            this.btnCadastrarDepartamento.Location = new System.Drawing.Point(47, 180);
             this.btnCadastrarDepartamento.Name = "btnCadastrarDepartamento";
             this.btnCadastrarDepartamento.Size = new System.Drawing.Size(223, 23);
             this.btnCadastrarDepartamento.TabIndex = 4;
@@ -89,7 +91,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(47, 202);
+            this.btnVoltar.Location = new System.Drawing.Point(47, 239);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(223, 23);
             this.btnVoltar.TabIndex = 5;
@@ -99,7 +101,7 @@
             // 
             // btnCadastrarUsuario
             // 
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(47, 173);
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(47, 210);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
             this.btnCadastrarUsuario.Size = new System.Drawing.Size(223, 23);
             this.btnCadastrarUsuario.TabIndex = 6;
@@ -107,11 +109,31 @@
             this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
             this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 23);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Usuário logado:";
+            // 
+            // txtUsuarioLogado
+            // 
+            this.txtUsuarioLogado.Location = new System.Drawing.Point(155, 9);
+            this.txtUsuarioLogado.Name = "txtUsuarioLogado";
+            this.txtUsuarioLogado.ReadOnly = true;
+            this.txtUsuarioLogado.Size = new System.Drawing.Size(145, 20);
+            this.txtUsuarioLogado.TabIndex = 8;
+            // 
             // TelaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 242);
+            this.ClientSize = new System.Drawing.Size(312, 277);
+            this.Controls.Add(this.txtUsuarioLogado);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCadastrarUsuario);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrarDepartamento);
@@ -136,5 +158,7 @@
         private System.Windows.Forms.Button btnCadastrarDepartamento;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrarUsuario;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtUsuarioLogado;
     }
 }

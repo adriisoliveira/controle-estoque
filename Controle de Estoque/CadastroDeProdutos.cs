@@ -25,23 +25,38 @@ namespace Controle_de_Estoque
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            SalvarProduto();
-            //Pergunta se o usuário deseja adicionar outro produto
-            if (MessageBox.Show("Gostaria de cadastrar outro produto?", "Confirma?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //Instancia a classe de conexão com o banco
+            ConexaoBanco conexao = new ConexaoBanco();
+            //Instancia a classe de comandos do SQL
+            SqlCommand cmd = new SqlCommand();
+            try
             {
-                //Caso sim, ele limpa os campos
-                LimpaCampos();
-                SalvarProduto();
-
+                //abre a conexão
+                cmd.Connection = conexao.Conectar();
+                //Comando SQL para salvar os dados no banco
+                cmd.CommandText = "INSERT INTO Produtos values ('" + txtCodigo.Text + "','" + txtNomeProduto.Text + "','" + txtValorCompra.Text + "','" + txtValorVenda.Text + "','" + txtQuantidade.Text + "','" + txtDescricao.Text + "','" + cbxDepartamento.Text+"')";
+                //executa o comando
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Dados inseridos com sucesso!");
+                //Pergunta se o usuário deseja adicionar outro produto
+                if (MessageBox.Show("Gostaria de cadastrar outro produto?", "Confirma?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //Caso sim, ele limpa os campos
+                    LimpaCampos();
+                }
+                else
+                {
+                    //caso não volta para o inicio
+                    TelaInicio inicio = new TelaInicio();
+                    inicio.Show();
+                    this.Hide();
+                }
             }
-            else
+            catch (SqlException ex)
             {
-                //caso não volta para o inicio
-                TelaInicio inicio = new TelaInicio();
-                inicio.Show();
-                this.Hide();
+                MessageBox.Show("Erro ao conectar-se ao banco de dados",ex.Message);
             }
-
+            conexao.Desconectar();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -61,40 +76,25 @@ namespace Controle_de_Estoque
             txtValorVenda.Text = "";
         }
 
-        private void SalvarProduto()
-        {
-            //Instancia a classe de conexão com o banco
-            ConexaoBanco conexao = new ConexaoBanco();
-            //Instancia a classe de comandos do SQL
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                //abre a conexão
-                cmd.Connection = conexao.Conectar();
-                //Comando SQL para salvar os dados no banco
-                cmd.CommandText = "INSERT INTO Produto values ('" + txtCodigo.Text + "','" + txtNomeProduto.Text + "','" + txtValorCompra.Text + "','" + txtValorVenda.Text + "','" + txtQuantidade.Text + "','" + txtDescricao.Text + "','" + cbxDepartamento.Items + ")";
-                //executa o comando
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Dados inseridos com sucesso!");
-                conexao.Desconectar();
-                
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Erro ao conectar-se ao banco de dados");
-            }
 
-        }
-
-        private void cbxDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        private void CadastroDeProdutos_Load(object sender, EventArgs e)
         {
             ConexaoBanco conexao = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.Conectar();
-            cmd.CommandText = "SELECT Codigo FROM Departamentos";
-            SqlDataReader dr = cmd.ExecuteReader();
-            cbxDepartamento.DisplayMember = "Codigo";
-            cbxDepartamento.DataSource = (dr);
+            try
+            {
+                cmd.CommandText = "SELECT Codigo FROM Departamentos";
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                cbxDepartamento.DisplayMember = "Codigo";
+                cbxDepartamento.DataSource = (dt);
+            }   
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro", ex.Message);
+            }
             cmd.Connection = conexao.Desconectar();
         }
     }
