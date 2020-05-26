@@ -47,13 +47,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDepartamento = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 9);
+            this.label1.Location = new System.Drawing.Point(25, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 31);
             this.label1.TabIndex = 1;
@@ -223,11 +225,31 @@
             this.txtDepartamento.Size = new System.Drawing.Size(227, 20);
             this.txtDepartamento.TabIndex = 32;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(321, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(352, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Para realizar a atualização do seu estoque, preencha o campo do código";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(324, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(275, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "do produto e clique em buscar, altere e clique em Salvar!";
+            // 
             // AtualizarEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 494);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDepartamento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVoltar);
@@ -275,5 +297,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDepartamento;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -13,3 +13,4 @@ C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle de 
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle de Estoque.csproj.CoreCompileInputs.cache
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle de Estoque.exe
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle de Estoque.pdb
+C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle_de_Estoque.CadastroUsuario.resources

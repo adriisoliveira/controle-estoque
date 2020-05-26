@@ -72,5 +72,6 @@ namespace Controle_de_Estoque
             txtNomeFantasia.Text = "";
 
         }
+
     }
 }

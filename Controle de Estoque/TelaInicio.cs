@@ -59,5 +59,10 @@ namespace Controle_de_Estoque
         {
 
         }
+
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

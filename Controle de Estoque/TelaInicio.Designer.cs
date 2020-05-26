@@ -34,6 +34,7 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrarDepartamento = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +89,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(47, 173);
+            this.btnVoltar.Location = new System.Drawing.Point(47, 202);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(223, 23);
             this.btnVoltar.TabIndex = 5;
@@ -96,11 +97,22 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnCadastrarUsuario
+            // 
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(47, 173);
+            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(223, 23);
+            this.btnCadastrarUsuario.TabIndex = 6;
+            this.btnCadastrarUsuario.Text = "Cadastrar Usuário";
+            this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
+            // 
             // TelaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 228);
+            this.ClientSize = new System.Drawing.Size(312, 242);
+            this.Controls.Add(this.btnCadastrarUsuario);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrarDepartamento);
             this.Controls.Add(this.btnAlterar);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCadastrarDepartamento;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnCadastrarUsuario;
     }
 }
