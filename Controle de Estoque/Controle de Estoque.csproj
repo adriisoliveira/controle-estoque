@@ -64,6 +64,7 @@
     <Compile Include="CadastroDeProdutos.Designer.cs">
       <DependentUpon>CadastroDeProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConexaoBanco.cs" />
     <Compile Include="ConsultaDeProdutos.cs">
       <SubType>Form</SubType>
     </Compile>

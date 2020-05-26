@@ -32,13 +32,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rtbxConsulta = new System.Windows.Forms.RichTextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(169, 9);
+            this.label1.Location = new System.Drawing.Point(197, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 31);
             this.label1.TabIndex = 1;
@@ -71,11 +73,31 @@
             this.textBox1.Size = new System.Drawing.Size(162, 20);
             this.textBox1.TabIndex = 4;
             // 
+            // rtbxConsulta
+            // 
+            this.rtbxConsulta.Location = new System.Drawing.Point(18, 103);
+            this.rtbxConsulta.Name = "rtbxConsulta";
+            this.rtbxConsulta.Size = new System.Drawing.Size(637, 191);
+            this.rtbxConsulta.TabIndex = 5;
+            this.rtbxConsulta.Text = "";
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(527, 300);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(128, 33);
+            this.btnVoltar.TabIndex = 6;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
             // ConsultaDeProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 450);
+            this.ClientSize = new System.Drawing.Size(674, 358);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.rtbxConsulta);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -94,5 +116,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox rtbxConsulta;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

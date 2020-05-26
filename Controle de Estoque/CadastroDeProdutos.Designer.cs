@@ -32,17 +32,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxDepartamento = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtValorCompra = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtValorVenda = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -85,13 +85,13 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Selecione o departamento:";
             // 
-            // comboBox1
+            // cbxDepartamento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(528, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbxDepartamento.FormattingEnabled = true;
+            this.cbxDepartamento.Location = new System.Drawing.Point(528, 60);
+            this.cbxDepartamento.Name = "cbxDepartamento";
+            this.cbxDepartamento.Size = new System.Drawing.Size(174, 21);
+            this.cbxDepartamento.TabIndex = 4;
             // 
             // label4
             // 
@@ -103,12 +103,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Nome do produto:";
             // 
-            // textBox1
+            // txtNomeProduto
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(551, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNomeProduto.Location = new System.Drawing.Point(151, 102);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(551, 20);
+            this.txtNomeProduto.TabIndex = 6;
             // 
             // label5
             // 
@@ -120,12 +120,12 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Valor de compra:";
             // 
-            // textBox2
+            // txtValorCompra
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtValorCompra.Location = new System.Drawing.Point(151, 141);
+            this.txtValorCompra.Name = "txtValorCompra";
+            this.txtValorCompra.Size = new System.Drawing.Size(100, 20);
+            this.txtValorCompra.TabIndex = 8;
             // 
             // label6
             // 
@@ -137,12 +137,12 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Valor de venda:";
             // 
-            // textBox3
+            // txtValorVenda
             // 
-            this.textBox3.Location = new System.Drawing.Point(402, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtValorVenda.Location = new System.Drawing.Point(402, 140);
+            this.txtValorVenda.Name = "txtValorVenda";
+            this.txtValorVenda.Size = new System.Drawing.Size(100, 20);
+            this.txtValorVenda.TabIndex = 10;
             // 
             // label7
             // 
@@ -154,12 +154,12 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Quantidade:";
             // 
-            // textBox4
+            // txtQuantidade
             // 
-            this.textBox4.Location = new System.Drawing.Point(635, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(67, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtQuantidade.Location = new System.Drawing.Point(635, 144);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(67, 20);
+            this.txtQuantidade.TabIndex = 12;
             // 
             // label8
             // 
@@ -171,13 +171,13 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Descrição e Anotações extras:";
             // 
-            // textBox5
+            // txtDescricao
             // 
-            this.textBox5.Location = new System.Drawing.Point(18, 209);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(684, 161);
-            this.textBox5.TabIndex = 14;
+            this.txtDescricao.Location = new System.Drawing.Point(18, 209);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(684, 161);
+            this.txtDescricao.TabIndex = 14;
             // 
             // btnSalvar
             // 
@@ -188,6 +188,7 @@
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -198,6 +199,7 @@
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnVoltar
             // 
@@ -208,6 +210,7 @@
             this.btnVoltar.TabIndex = 17;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // CadastroDeProdutos
             // 
@@ -217,17 +220,17 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtValorVenda);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtValorCompra);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNomeProduto);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxDepartamento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
@@ -245,17 +248,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxDepartamento;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtValorCompra;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtValorVenda;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnVoltar;

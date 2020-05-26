@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,64 @@ namespace Controle_de_Estoque
             InitializeComponent();
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimpaCampos();
+        }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            //Instancia a classe de conexão com o banco
+            ConexaoBanco conexao = new ConexaoBanco();
+            //Instancia a classe de comandos do SQL
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                //abre a conexão
+                cmd.Connection = conexao.Conectar();
+                //Comando SQL para salvar os dados no banco
+                cmd.CommandText = "INSERT INTO Produto values ('"+txtCodigo.Text+"','"+txtNomeProduto.Text+"','"+txtValorCompra.Text+"','"+txtValorVenda.Text+"','"+txtQuantidade.Text+"','"+txtDescricao.Text+"','"+cbxDepartamento.Items+")";
+                //executa o comando
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Dados inseridos com sucesso!");
+                conexao.Desconectar();
+                //Pergunta se o usuário deseja adicionar outro produto
+                if (MessageBox.Show("Gostaria de cadastrar outro produto?","Confirma?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //Caso sim, ele limpa os campos
+                    LimpaCampos();
+                }
+                else
+                {
+                    //caso não volta para o inicio
+                    TelaInicio inicio = new TelaInicio();
+                    inicio.Show();
+                    this.Hide();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro ao conectar-se ao banco de dados");
+            }
+            
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            TelaInicio inicio = new TelaInicio();
+            inicio.Show();
+            this.Hide();
+        }
+
+        private void LimpaCampos()
+        {
+            txtCodigo.Text = "";
+            txtDescricao.Text = "";
+            txtNomeProduto.Text = "";
+            txtQuantidade.Text = "";
+            txtValorCompra.Text = "";
+            txtValorVenda.Text = "";
+        }
     }
 }
