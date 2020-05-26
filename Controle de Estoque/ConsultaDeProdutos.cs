@@ -38,12 +38,12 @@ namespace Controle_de_Estoque
             string codigo = txtCodigo.Text;
             cmd.CommandText = "SELECT * FROM Produtos WHERE Codigo = @codigo";
             cmd.Parameters.AddWithValue("@codigo", codigo);
-            cmd.ExecuteNonQuery();
+           
             try
             {
                 //inicia a conexão com o banco
                 cmd.Connection = conexao.Conectar();
-
+                cmd.ExecuteNonQuery();
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())

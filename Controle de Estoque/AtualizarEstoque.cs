@@ -56,7 +56,7 @@ namespace Controle_de_Estoque
             txtProduto.Text = "";
             txtQuantidade.Text = "";
             txtValorCompra.Text = "";
-            txtValorVenda.Text = "";
+            tblValorVenda.Text = "";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -64,14 +64,19 @@ namespace Controle_de_Estoque
             ConexaoBanco conexao = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
             string codigo = txtCodigo.Text;
+            string nome = "";
+            string valorCompra = "";
+            string valorVenda = "";
+            string qntdEstoque = "";
+            string dpto = "";
             cmd.CommandText = "SELECT Codigo,Nome,ValorCompra,ValorVenda,QntEstoque,Descricao,Departamento FROM Produtos WHERE Codigo = @codigo";
             cmd.Parameters.AddWithValue("@codigo", codigo);
-            cmd.ExecuteNonQuery();
+            
             try
             {
                 //inicia a conexão com o banco
                 cmd.Connection = conexao.Conectar();
-
+                cmd.ExecuteNonQuery();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -107,13 +112,14 @@ namespace Controle_de_Estoque
                 string codigo = txtCodigo.Text;
                 //inicia a conexão com o banco
                 cmd.Connection = conexao.Conectar();
-                cmd.CommandText = "UPDATE Produtos SET Nome = '" + txtProduto.Text + ",ValorCompra = '" + txtValorCompra.Text + "',ValorVenda = " + txtValorVenda.Text + "',QntEstoque = '" + txtQuantidade.Text + "', Descricao = '" + txtDescricao.Text + "' WHERE Codigo = @codigo)";
+                cmd.CommandText = "SELECT Codigo,Nome,ValorCompra,ValorVenda,QntEstoque,Descricao,Departamento FROM Produtos WHERE Codigo = @codigo";
                 cmd.Parameters.AddWithValue("@codigo", codigo);
                 cmd.ExecuteNonQuery();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     codigo = dr["Codigo"].ToString();
+                    cmd.CommandText = "UPDATE Produtos SET Nome = '" + txtProduto.Text + ",ValorCompra = '" + txtValorCompra.Text + "',ValorVenda = " + tblValorVenda.Text + "',QntEstoque = '" + txtQuantidade.Text + "', Descricao = '" + txtDescricao.Text + "' WHERE Codigo = @codigo)";
                     MessageBox.Show("Dados alterados com sucesso!");
                 }
                 else

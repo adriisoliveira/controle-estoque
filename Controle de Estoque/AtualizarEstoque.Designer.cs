@@ -39,8 +39,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtValorVenda = new System.Windows.Forms.Label();
+            this.txtValorVenda = new System.Windows.Forms.TextBox();
+            this.tblValorVenda = new System.Windows.Forms.Label();
             this.txtValorCompra = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtProduto = new System.Windows.Forms.TextBox();
@@ -157,22 +157,22 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Quantidade:";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(415, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 23;
-            // 
             // txtValorVenda
             // 
-            this.txtValorVenda.AutoSize = true;
-            this.txtValorVenda.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorVenda.Location = new System.Drawing.Point(303, 149);
+            this.txtValorVenda.Location = new System.Drawing.Point(415, 147);
             this.txtValorVenda.Name = "txtValorVenda";
-            this.txtValorVenda.Size = new System.Drawing.Size(106, 20);
-            this.txtValorVenda.TabIndex = 22;
-            this.txtValorVenda.Text = "Valor de venda:";
+            this.txtValorVenda.Size = new System.Drawing.Size(100, 20);
+            this.txtValorVenda.TabIndex = 23;
+            // 
+            // tblValorVenda
+            // 
+            this.tblValorVenda.AutoSize = true;
+            this.tblValorVenda.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblValorVenda.Location = new System.Drawing.Point(303, 149);
+            this.tblValorVenda.Name = "tblValorVenda";
+            this.tblValorVenda.Size = new System.Drawing.Size(106, 20);
+            this.tblValorVenda.TabIndex = 22;
+            this.tblValorVenda.Text = "Valor de venda:";
             // 
             // txtValorCompra
             // 
@@ -259,8 +259,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtValorVenda);
+            this.Controls.Add(this.tblValorVenda);
             this.Controls.Add(this.txtValorCompra);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtProduto);
@@ -289,8 +289,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label txtValorVenda;
+        private System.Windows.Forms.TextBox txtValorVenda;
+        private System.Windows.Forms.Label tblValorVenda;
         private System.Windows.Forms.TextBox txtValorCompra;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtProduto;
