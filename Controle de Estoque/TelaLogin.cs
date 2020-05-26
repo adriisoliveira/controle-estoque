@@ -54,6 +54,7 @@ namespace Controle_de_Estoque
             {
                 MessageBox.Show("Erro aos se conectar com o banco de dados!");
             }
+            conexao.Desconectar();
 
         }
 

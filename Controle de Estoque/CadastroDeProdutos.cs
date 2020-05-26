@@ -25,39 +25,22 @@ namespace Controle_de_Estoque
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //Instancia a classe de conexão com o banco
-            ConexaoBanco conexao = new ConexaoBanco();
-            //Instancia a classe de comandos do SQL
-            SqlCommand cmd = new SqlCommand();
-            try
+            SalvarProduto();
+            //Pergunta se o usuário deseja adicionar outro produto
+            if (MessageBox.Show("Gostaria de cadastrar outro produto?", "Confirma?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //abre a conexão
-                cmd.Connection = conexao.Conectar();
-                //Comando SQL para salvar os dados no banco
-                cmd.CommandText = "INSERT INTO Produto values ('"+txtCodigo.Text+"','"+txtNomeProduto.Text+"','"+txtValorCompra.Text+"','"+txtValorVenda.Text+"','"+txtQuantidade.Text+"','"+txtDescricao.Text+"','"+cbxDepartamento.Items+")";
-                //executa o comando
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Dados inseridos com sucesso!");
-                conexao.Desconectar();
-                //Pergunta se o usuário deseja adicionar outro produto
-                if (MessageBox.Show("Gostaria de cadastrar outro produto?","Confirma?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    //Caso sim, ele limpa os campos
-                    LimpaCampos();
-                }
-                else
-                {
-                    //caso não volta para o inicio
-                    TelaInicio inicio = new TelaInicio();
-                    inicio.Show();
-                    this.Hide();
-                }
+                //Caso sim, ele limpa os campos
+                LimpaCampos();
+                SalvarProduto();
+
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show("Erro ao conectar-se ao banco de dados");
+                //caso não volta para o inicio
+                TelaInicio inicio = new TelaInicio();
+                inicio.Show();
+                this.Hide();
             }
-            
 
         }
 
@@ -76,6 +59,43 @@ namespace Controle_de_Estoque
             txtQuantidade.Text = "";
             txtValorCompra.Text = "";
             txtValorVenda.Text = "";
+        }
+
+        private void SalvarProduto()
+        {
+            //Instancia a classe de conexão com o banco
+            ConexaoBanco conexao = new ConexaoBanco();
+            //Instancia a classe de comandos do SQL
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                //abre a conexão
+                cmd.Connection = conexao.Conectar();
+                //Comando SQL para salvar os dados no banco
+                cmd.CommandText = "INSERT INTO Produto values ('" + txtCodigo.Text + "','" + txtNomeProduto.Text + "','" + txtValorCompra.Text + "','" + txtValorVenda.Text + "','" + txtQuantidade.Text + "','" + txtDescricao.Text + "','" + cbxDepartamento.Items + ")";
+                //executa o comando
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Dados inseridos com sucesso!");
+                conexao.Desconectar();
+                
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro ao conectar-se ao banco de dados");
+            }
+
+        }
+
+        private void cbxDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConexaoBanco conexao = new ConexaoBanco();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexao.Conectar();
+            cmd.CommandText = "SELECT Codigo FROM Departamentos";
+            SqlDataReader dr = cmd.ExecuteReader();
+            cbxDepartamento.DisplayMember = "Codigo";
+            cbxDepartamento.DataSource = (dr);
+            cmd.Connection = conexao.Desconectar();
         }
     }
 }

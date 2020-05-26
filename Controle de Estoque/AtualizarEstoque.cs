@@ -88,7 +88,7 @@ namespace Controle_de_Estoque
                 {
                     MessageBox.Show("Código incorreto");
                 }
-
+                conexao.Desconectar();
 
             }
             catch(SqlException ex)

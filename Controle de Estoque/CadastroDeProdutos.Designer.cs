@@ -92,6 +92,7 @@
             this.cbxDepartamento.Name = "cbxDepartamento";
             this.cbxDepartamento.Size = new System.Drawing.Size(174, 21);
             this.cbxDepartamento.TabIndex = 4;
+            this.cbxDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamento_SelectedIndexChanged);
             // 
             // label4
             // 

@@ -40,6 +40,7 @@ namespace Controle_de_Estoque
                 cmd.Connection = conexao.Conectar();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Usuario cadastrado com sucesso!");
+                conexao.Desconectar();
 
             }
             catch(SqlException ex)
