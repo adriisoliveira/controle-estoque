@@ -62,7 +62,9 @@ namespace Controle_de_Estoque
 
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)
         {
-
+            CadastroUsuario NewUsuario = new CadastroUsuario();
+            NewUsuario.Show();
+            this.Hide();
         }
     }
 }
