@@ -54,18 +54,6 @@ namespace Controle_de_Estoque
                     da.Fill(ds, "Produto");
                     dtvProdutos.DataSource = ds;
                     dtvProdutos.DataMember = "Produto";
-                    
-                    
-                    /*DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    SqlDataAdapter dataadapter = novo SqlDataAdapter (sql, conexão);
-                     DataSet ds = novo DataSet ();
-                    connection.Open ();
-                    dataadapter.Fill (ds, "Tabela de autores");
-                    connection.Close ();
-                    dataGridView1.DataSource = ds;
-                    dataGridView1.DataMember = "Tabela de autores";*/
                 }
                 else
                 {

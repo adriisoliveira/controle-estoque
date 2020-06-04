@@ -1,7 +1,6 @@
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\bin\Debug\Controle de Estoque.exe.config
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\bin\Debug\Controle de Estoque.exe
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\bin\Debug\Controle de Estoque.pdb
-C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle de Estoque.csprojAssemblyReference.cache
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle_de_Estoque.AtualizarEstoque.resources
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle_de_Estoque.CadastroDepartamentos.resources
 C:\Users\Drih\GitHub\controle-estoque\Controle de Estoque\obj\Debug\Controle_de_Estoque.CadastroDeProdutos.resources
