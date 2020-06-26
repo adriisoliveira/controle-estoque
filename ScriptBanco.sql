@@ -1,6 +1,6 @@
 create database controleEstoque
 
-use controleEstoque
+use controleDeEstoque
 
 create table Departamentos (
 	Codigo varchar (15) primary key,
@@ -28,4 +28,5 @@ create table Login (
 
 select * from Login
  
- drop table Departamentos
+
+ insert into Login values ('Adrianne','123456')
