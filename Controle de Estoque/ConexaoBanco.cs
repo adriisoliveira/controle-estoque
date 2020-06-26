@@ -15,8 +15,6 @@ namespace Controle_de_Estoque
         {
             //string de conexão, é o endereço do banco de dados
             con.ConnectionString = "Data Source=LAPTOP-19CP4RFH\\DRIH;Initial Catalog=ControleDeEstoque;Integrated Security=True";
-
-           
         }
 
         private SqlConnection Conectar()
